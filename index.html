@@ -1,33 +1,102 @@
 <!DOCTYPE html>
-<html lang="en-US">
+
 <head>
-  <link rel="stylesheet" href="style.css">
-  <title>Christopher Avallon, NJ Data Scientist</title>
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Christopher Avallon, a NJ based Datascientist with specialized industry knowledge in Sales, Finance, Real Estate, Management, and Small Business Ownership.">
-  <meta name="keywords" content="NJ Data Scientist, Christopher Avallon, Data Analytics in NJ, Technology, Data Science, New Jersey">
+  <title>Christopher Avallon, Data Scientist</title>
+  <meta name="description" content="A New Jersey real estate blog written by a license NJ broker. Read this for all news & relevant issues about NJ real estate.">
+  <link rel="stylesheet" href="design.css">
+  <!--<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<!--<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-
   <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">About Me</a>
-    <a href="#contact">Projects</a>
-    <a href="#about">Resume</a>
+    <div id="navbar"><a href="index.html"><img src="Images\christopher-avallon-high-resolution-logo-transparent.png" height="50px" width="auto"></a></div>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <!--<input type="text" placeholder="Search..">-->
   </div>
-  
-  <div id="about">
-    <h1>Christopher Avallon, NJ Data Scientist</h1>
-  </div>
-  <br>
-    <h3>About Me:</h3>
-  <p><h4>As an experienced business person, I am able to bring a plethora of real world knowledge to the data science industry.
-    <br>My background includes finance, real estate, small business ownership, sales, and investing (real estate and financial). <br>
-       
-  </h4></p>
 
+  <div id="description" class="header">
+  <h1>Today's Data Solves Tomorrows Problems</h1>
+    <h4>Browse this website to learn how I can use Data Science to create a better future for you and your business.</h4>
+
+    </div>
+
+<br>
+<br>
+
+<canvas id="myChart"></canvas>
+
+
+<script>
+  var xValues = ["Python", "HTML", "JavaScript", "SQL", "VBA"];
+  var yValues = [8, 3, 4, 5, 2];
+  var barColors = ["red", "green","blue","orange","brown"];
+  
+  new Chart("myChart", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+        display: false
+      },
+        title: {
+          display: true,
+          text: "2024 Projects Completed By Programming Language"
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true, // Start the y-axis at 0
+          suggestedMin: 0 // Suggested minimum value for the y-axis
+        }
+      },
+    }
+  });
+  </script>
+  <!--<div id="latest news" class="main">
+      <img src="Images/interior.jpg" alt="market stats" width="300" height="200">
+      <a href="https://njar-public.stats.10kresearch.com/reports" target="_blank"><h3>New Jersey Market Updates</h3></a>
+    <p>Click in this section to find the monthly market metrics broken down by county for the entire state of New Jersey.</p>
+
+
+</div>
+
+
+
+<br>
+  
+  <div id="partners" class="main">
+       <img src="Images/pooltable.jpeg" alt="trusted partners" width="300" height="200">
+       <a href="https://avallonre.com" target="_blank"><h3>Trusted Partners</h3></a>
+       <p>Click this section to connect with one of New Jersey's most trusted real estate brokers.</p>
+</div>
+
+<div id="test" class="main">
+  <img src="Images/pooltable.jpeg" alt="trusted partners" width="300" height="200">
+  <a href="https://avallonre.com" target="_blank"><h3>Trusted Partners</h3></a>
+  <p>Click this section to connect with one of New Jersey's most trusted real estate brokers.</p>
+</div>-->
+
+<br>
 
 </body>
-</html>
